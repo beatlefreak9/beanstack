@@ -1,0 +1,14 @@
+<p>
+    <%= @video.title %>
+</p>
+
+<video src="<%= @video.video.url %>" controls>
+  Your browser does not support the <code>video</code> element.
+</video>
+
+<p>
+    <%= @video.description %>
+</p>
+
+<%= link_to 'Back', videos_path %>
+| <%= link_to 'Edit', edit_video_path(@video) %>
