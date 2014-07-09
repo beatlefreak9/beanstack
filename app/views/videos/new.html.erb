@@ -1,5 +1,26 @@
 <h1>New video</h1>
 
-<%= render 'form' %>
+<%= render 'err' %>
+
+<%= form_for @video do |f| %>
+<p>
+    <%= f.label :video %><br>
+    <%= f.file_field :video %>
+</p>
+
+<p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+</p>
+
+<p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+</p>
+
+<p>
+    <%= f.submit %>
+</p>
+<% end %>
 
 <%= link_to 'Back', videos_path %>
