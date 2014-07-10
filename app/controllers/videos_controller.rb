@@ -1,4 +1,6 @@
 class VideosController < ApplicationController
+    before_filter :require_valid_user
+
     def new
         @video = Video.new
     end
