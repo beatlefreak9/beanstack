@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+    has_many :videos
+    
     has_secure_password
 
     validates_confirmation_of :password

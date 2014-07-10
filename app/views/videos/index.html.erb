@@ -11,6 +11,7 @@
     <% @videos.each do |video| %>
         <tr>
             <td><%= video.title %></td>
+            <td><%= User.find(video.user_id).email %></td>
             <td><%= link_to 'Show', video_path(video) %></td>
             <td><%= link_to 'Edit', edit_video_path(video) %></td>
             <td><%= link_to 'Destroy', video_path(video), method: :delete, data: { confirm: 'Are you sure?' } %></td>
