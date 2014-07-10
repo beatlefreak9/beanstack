@@ -13,3 +13,9 @@
  *= require_tree .
  *= require_self
  */
+
+#user_nav {
+    font-family: monospace;
+    border-bottom: 1px solid #000000;
+    padding-bottom: 4px;
+}
