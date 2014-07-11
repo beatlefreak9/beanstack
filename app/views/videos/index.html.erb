@@ -1,20 +1,14 @@
-<h1>Listing videos</h1>
+<h1 id="page-heading">my videos</h1>
 
-<%= link_to 'New video', new_video_path %>
-
-<table>
-    <tr>
-        <th>Title</th>
-        <th colspan="2"></th>
-    </tr>
-
+<div id="video-list">
     <% @videos.each do |video| %>
-        <tr>
-            <td><%= video.title %></td>
-            <td><%= User.find(video.user_id).email %></td>
-            <td><%= link_to 'Show', video_path(video) %></td>
-            <td><%= link_to 'Edit', edit_video_path(video) %></td>
-            <td><%= link_to 'Destroy', video_path(video), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+        <div class="video-box">
+            <div style="height: 64px; width: 64px; background-color: #000000; color: #FFFFFF; float: left; margin: 3px;">IMAGE<br>HERE</div>
+            <div class="video-box-text">
+                <b><%= link_to video.title, video_path(video) %></b></br>
+                <%= User.find(video.user_id).email %><br>
+                <%= link_to 'Edit', edit_video_path(video) %> |
+                <%= link_to 'Delete', video_path(video), method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div><br>
     <% end %>
-</table>
+</div>

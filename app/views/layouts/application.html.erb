@@ -11,8 +11,11 @@
 <div id="user_nav">
   <% if current_user %>
     logged in as <%= current_user.email %>.
-    <%= link_to "log out", logout_path %> |
-    <%= link_to 'videos', videos_path %>
+    <%= link_to "log out", logout_path %>
+    <div style="float: right">
+        <%= link_to 'my videos', videos_path %> |
+        <%= link_to 'upload', new_video_path %>
+    </div>
   <% else %>
     <%= link_to "sign up", signup_path %> or
     <%= link_to "log in", login_path %>
