@@ -22,7 +22,12 @@ class VideosController < ApplicationController
 
     def index
         #@videos = Video.all
-        @videos = current_user.videos
+        if current_user.videos
+            @videos = current_user.videos
+        else
+            flash.now.alert = "user has no videos!"
+            render 'no videos'
+        end
     end
 
     def edit

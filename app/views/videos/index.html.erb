@@ -3,7 +3,7 @@
 <div id="video-list">
     <% @videos.each do |video| %>
         <div class="video-box">
-            <div style="height: 64px; width: 64px; background-color: #000000; color: #FFFFFF; float: left; margin: 3px;">IMAGE<br>HERE</div>
+            <img class="video-box-thumb" src="<%= video.video.url(:thumb) %>">
             <div class="video-box-text">
                 <b><%= link_to video.title, video_path(video) %></b></br>
                 <%= User.find(video.user_id).email %><br>

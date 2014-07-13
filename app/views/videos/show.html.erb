@@ -1,14 +1,17 @@
-<p>
+<p id="video-title">
     <%= @video.title %>
 </p>
 
-<video src="<%= @video.video.url %>" controls>
-  Your browser does not support the <code>video</code> element.
+<video controls id="video-player">
+    <source src="<%= @video.video.url(:ogg) %>" type="video/ogg">
+    <source src="<%= @video.video.url(:mp4) %>" type="video/mp4">
+    Your browser does not support the <code>video</code> element.
 </video>
 
-<p>
+<div id="doobly-doo">
+<p id="video-description">
     <%= @video.description %>
 </p>
-
-<%= link_to 'Back', videos_path %>
-| <%= link_to 'Edit', edit_video_path(@video) %>
+<p id="admin-controls">
+    <%= link_to 'Edit', edit_video_path(@video) %>
+</p>
