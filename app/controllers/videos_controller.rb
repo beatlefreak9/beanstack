@@ -21,7 +21,8 @@ class VideosController < ApplicationController
     end
 
     def index
-        @videos = Video.all
+        #@videos = Video.all
+        @videos = current_user.videos
     end
 
     def edit

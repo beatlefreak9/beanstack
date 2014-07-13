@@ -30,6 +30,8 @@ gem 'spring',        group: :development
 
 # Use paperclip for file attachments on models
 gem 'paperclip', '~> 4.2.0'
+gem 'paperclip-ffmpeg'
+gem 'paperclip-dropbox'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
