@@ -12,6 +12,7 @@ beanstack is one half of a framework designed to decentralize video hosting and 
 * Ruby (~>2.1.2)
 * Bundler (~>1.6.3)
 * PostgreSQL (or the knowledge to change beanstack to another database provider, see config/database.yml)
+* Redis
 * ffmpeg with Ogg Vorbis and Theora codecs enabled
 
 ## Setup

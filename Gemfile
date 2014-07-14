@@ -32,6 +32,10 @@ gem 'spring',        group: :development
 gem 'paperclip', '~> 4.2.0'
 gem 'paperclip-ffmpeg'
 gem 'paperclip-dropbox'
+gem 'delayed_paperclip'
+
+# Use resque for delayed job processing
+gem 'resque'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
