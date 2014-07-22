@@ -35,7 +35,10 @@ gem 'paperclip-dropbox'
 gem 'delayed_paperclip'
 
 # Use resque for delayed job processing
-gem 'resque'
+# gem 'resque'
+
+# Use delayed_job for delayed job processing
+gem 'delayed_job_active_record'
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
