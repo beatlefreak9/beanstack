@@ -6,7 +6,7 @@
             <img class="video-box-thumb" src="<%= video.video.url(:thumb) %>">
             <div class="video-box-text">
                 <b><%= link_to video.title, video_path(video) %></b></br>
-                <%= User.find(video.user_id).email %><br>
+                <%= User.find(video.user_id).name %><br>
                 <%= link_to 'Edit', edit_video_path(video) %> |
                 <%= link_to 'Delete', video_path(video), method: :delete, data: { confirm: 'Are you sure?' } %>
         </div><br>
