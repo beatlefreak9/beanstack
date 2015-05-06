@@ -14,14 +14,9 @@
  *= require_self
  */
 
-body {
-    font-family: sans-serif;
-}
-
-#user_nav {
-    border-bottom: 1px solid #000000;
-    padding-bottom: 4px;
-}
+@import "bootstrap-sprockets";
+@import "bootstrap";
+//@import "bootstrap/theme";
 
 #flash_notice {
     text-align: center;
@@ -33,9 +28,4 @@ body {
     background-color: #90EE90;
     color: #FFFFFF;
     padding: 2px;
-}
-
-#page-heading {
-    font-family: Lucida Grande;
-    text-align: center;
 }
