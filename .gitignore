@@ -17,9 +17,13 @@
 
 # Ignore environment file
 /.env
+/.rbenv-vars
 
 # Ignore rbenv version file
 /.ruby-version
 
 # Ignore Paperclip storage folder
 /public/system
+
+# Ignore shared folder
+/shared

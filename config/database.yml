@@ -2,6 +2,7 @@ default: &default
   adapter: postgresql
   encoding: unicode
   pool: 5
+  username: beanstack
 
 development:
   <<: *default
@@ -16,6 +17,5 @@ test:
 
 production:
   <<: *default
-  database: beanstack_production
-  username: beanstack
+  database: beanstack
   password: <%= ENV['beanstack_DATABASE_PASSWORD'] %>
